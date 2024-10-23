@@ -180,7 +180,7 @@
             }
         }
 
-        .hero {
+        .hero1 {
             min-height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
             background-image: url("img/hero.jpg");
@@ -349,6 +349,57 @@ footer ul li a:hover {
         flex-direction: row;
       }
     }
+    .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70h;
+            padding: 20px;
+            background-color: #8db418;
+        }
+
+        .hero-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 1200px;
+            gap: 20px;
+        }
+
+        .hero-box {
+            flex: 1 1 calc(33% - 20px);
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero-box img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .hero-box h3 {
+            padding: 15px;
+            background-color: #333;
+            color: white;
+        }
+
+        @media (max-width: 480px) {
+            .hero-container {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .hero-box {
+                margin-bottom: 20px;
+                flex-basis: 100%;
+            }
+        }
+
 /* about*/
 
  
@@ -396,7 +447,7 @@ footer ul li a:hover {
             </ul>
         </nav>
     </header>
-    <div class="hero"></div>
+    <div class="hero1"></div>
      <!-- Hero Section -->
   <section class="hero-section">
     <h1>PRADUM KUMAR</h1>
@@ -419,6 +470,34 @@ footer ul li a:hover {
       कड़ी मेहनत और हौंसला हो साथ,
       तो हर मुश्किल को हल करना चाहिए।</div>
   </div>
+  <section class="hero">
+    <div class="hero-container">
+        <div class="hero-box">
+            <img src="A cartoon chase sce (3).jpg" alt="Image 1">
+            <h3>Box 1</h3>
+        </div>
+        <div class="hero-box">
+            <img src="A cartoon chase sce (3).jpg" alt="Image 2">
+            <h3>Box 2</h3>
+        </div>
+        <div class="hero-box">
+            <img src="A cartoon chase sce (3).jpg" alt="Image 3">
+            <h3>Box 3</h3>
+        </div>
+        <div class="hero-box">
+            <img src="A cartoon chase sce (3).jpg" alt="Image 3">
+            <h3>Box 3</h3>
+        </div>
+        <div class="hero-box">
+            <img src="A cartoon chase sce (3).jpg" alt="Image 3">
+            <h3>Box 3</h3>
+        </div>
+        <div class="hero-box">
+            <img src="A cartoon chase sce (3).jpg" alt="Image 3">
+            <h3>Box 3</h3>
+        </div>
+    </div>
+</section>
     <footer>
         <div class="footer-content">
             <h3>&copy; Design By Pradum Kumar.</h3>
