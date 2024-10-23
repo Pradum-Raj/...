@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+    <title>Document</title>
+    <style>
+       :root {
+            --color-primary: rgb(29, 86, 29);
+            --color-light: rgb(29, 86, 29);
+            --color-dark: rgb(29, 86, 29);
+            --color-white: rgb(29, 86, 29);
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+        body {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            min-height: 100vh;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--color-primary);
+            padding: 0 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        .logo img{
+            
+            width: 60px;
+            height: 45px;
+            background-color: lightgray; /* for contrast */
+              }
+              img{
+                width: 100%;
+                height: auto;
+              }
+
+        .navigation ul {
+            list-style: none;
+        }
+
+        .header .navigation ul li {
+            float: left;
+            position: relative;
+        }
+
+        .header .navigation ul li a {
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+            padding: 20px;
+            display: block;
+            transition: all 0.3s ease-in;
+        }
+
+        .header .navigation ul li a:hover {
+            
+            background-color:black;
+        
+        }
+
+        .header .navigation ul li ul {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 200px;
+            background: linear-gradient(rgb(203, 183, 31),rgb(212, 46, 121));
+            display: none;
+            z-index: 1001;
+        }
+
+        .header .navigation ul li ul li {
+            width: 100%;
+            border-top: 1px solid black;
+        }
+
+        .header .navigation ul li ul li ul {
+            position: absolute;
+            left: 200px;
+            top: 0;
+        }
+
+        .header .navigation ul li:hover > ul {
+            display: block;
+        }
+
+        .header .navigation ul li ul li a {
+            font-size: 15px;
+            text-transform: capitalize;
+        }
+
+        .header .navigation ul li ul li span {
+            float: right;
+            color: pink;
+            background-color: blueviolet;
+            padding: 5px 10px;
+            font-size: 12px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        #toggle, 
+        .header label {
+            display: none;
+            color: aliceblue;
+        }
+
+        img {
+            width: 45px;
+            height: 35px;
+        }
+
+        @media (max-width: 480px) {
+            .header label {
+                display: block;
+            }
+
+            .header {
+                padding: 20px 10%;
+            }
+
+            .header .navigation {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: linear-gradient(rgb(65, 60, 60),grey);
+                display: none;
+                flex-direction: column;
+            }
+
+            .header .navigation ul {
+                display: block;
+                width: 100%;
+            }
+
+            .header .navigation ul li {
+                width: 100%;
+                border-top: 1px solid gold;
+            }
+
+            .header .navigation ul li a {
+                padding: 8px 30px 8px 10%;
+            }
+
+            .header .navigation ul li ul {
+                position: relative;
+                width: 100%;
+            }
+
+            .header .navigation ul li ul li ul {
+                position: relative;
+                width: 100%;
+            }
+
+            .header .navigation ul li:hover > ul {
+                display: block;
+            }
+
+            #toggle:checked ~ .navigation {
+                display: block;
+            }
+        }
+
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+            background-image: url("img/hero.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex: 1;
+            padding: 20px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: image 15s infinite ease-in-out;
+        }
+
+        @keyframes image {
+            0% { background-image: url("A cartoon chase sce (7).jpg"); }
+            10% { background-image: url("A cartoon chase sce (1).jpg"); }
+            20% { background-image: url("A cartoon chase sce (2).jpg"); }
+            30% { background-image: url("A cartoon chase sce (3).jpg"); }
+            40% { background-image: url("A cartoon chase sce (4).jpg"); }
+            50% { background-image: url("A cartoon chase sce (5).jpg"); }
+            60% { background-image: url("A cartoon chase sce (6).jpg"); }
+            70% { background-image: url("A cartoon chase sce (7).jpg"); }
+            80% { background-image: url("A cartoon chase sce (8).jpg"); }
+            90% { background-image: url("A cartoon chase sce (9).jpg"); }
+            100% { background-image: url("A cartoon chase sce (10).jpg"); }
+            
+        }
+    
+
+
+        
+        footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+}
+
+footer ul li {
+    margin-left: 15px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer ul li a:hover {
+    color: #ddd;
+}
+
+.social-media li a i {
+    font-size: 24px;
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><img src="pk.jpg"></div>
+        <input type="checkbox" id="toggle">
+        <label for="toggle">MENU &#9776;</label>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li> 
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a>
+                    <ul>
+                        <li><a href="#">HTML <span>30 posts</span></a></li>
+                        <li><a href="#">CSS <span>30 posts</span></a></li>
+                        <li><a href="#">JS <span>30 posts</span></a></li>
+                        <li><a href="#">PHP</a>
+                            <ul>
+                                <li><a href="#">HTML <span>30 posts</span></a></li>
+                                <li><a href="#">CSS <span>30 posts</span></a></li>
+                                <li><a href="#">JS <span>30 posts</span></a></li>
+                                <li><a href="#">PHP <span>30 posts</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Blog</a>
+                    <ul>
+                        <li><a href="#">HTML <span>30 posts</span></a></li>
+                        <li><a href="#">CSS <span>30 posts</span></a></li>
+                        <li><a href="#">JS <span>30 posts</span></a></li>
+                        <li><a href="#">PHP <span>30 posts</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero"></div>
+    <footer>
+        <div class="footer-content">
+            <h3>&copy; Design By Pradum Kumar.</h3>
+            <ul class="social-media">
+                <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
