@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
    
     <title>Document</title>
     <style>
@@ -26,6 +28,7 @@
             box-sizing: border-box;
             font-family: sans-serif;
             min-height: 100vh;
+            background: linear-gradient(red,yellow);
             
         }
 
@@ -183,7 +186,7 @@
         .hero1 {
             min-height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-            background-image: url("img/hero.jpg");
+            
             background-repeat: no-repeat;
             background-size: cover;
             flex: 1;
@@ -210,51 +213,115 @@
         }
     
 
-
-        
         footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
+            background: linear-gradient(black,rgb(92, 89, 89));
+            color: white;
+            text-align: center;
+            overflow: hidden;
+            padding: 10px 0;
+        }
 
-footer .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    flex-wrap: wrap;
-}
+        footer .footer-content {
+    
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            
+        }
 
-footer p {
-    margin: 10px 0;
-}
+        footer p {
+            margin: 10px 0;
+        }
 
-footer ul {
-    list-style-type: none;
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+            display: flex;
+        }
+
+        footer ul li {
+            margin-left: 15px;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        footer ul li a:hover {
+            color: #ddd;
+        }
+
+        .social-media li a i {
+            font-size: 24px;
+        }
+
+        footer .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer ul {
+                justify-content: center;
+            }
+
+            footer ul li {
+                margin: 5px;
+            }
+        
+
+
+        .social-media {
+    list-style: none;
     padding: 0;
-    margin: 10px 0;
+    margin: 0;
     display: flex;
+    justify-content: center;
+
 }
 
-footer ul li {
-    margin-left: 15px;
+.social-media li {
+    margin: 0 10px;
+    
 }
 
-footer ul li a {
-    color: white;
+.social-media li a {
+    color: white; /* Default icon color */
     text-decoration: none;
-    font-size: 20px;
+    font-size: 24px; /* Adjust size as needed */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and scale transition */
 }
 
-footer ul li a:hover {
-    color: #ddd;
+.social-media li a:hover {
+    color: #f0f0f0; /* Light color on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
 }
 
-.social-media li a i {
-    font-size: 24px;
+.social-media li a .fab {
+    font-size: 24px; /* Font Awesome icon size */
 }
+
+/* Specific colors for each social media icon */
+.social-media li a[href*="facebook.com"] {
+    color: #159dbc; /* Facebook Blue */
+}
+
+.social-media li a[href*="twitter.com"] {
+    color: #0f4dd4; /* Twitter Blue */
+}
+
+.social-media li a[href*="linkedin.com"] {
+    color: #0077b5; /* LinkedIn Blue */
+}
+  .social-media li a[href*="instagram.com"] {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Instagram gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* This makes the text transparent and shows the gradient */
+}
+
+
 .hero-section {
       width: 100%;
       height: 400px;
@@ -271,7 +338,8 @@ footer ul li a:hover {
 
     .hero-section h1 {
       font-size: 3rem;
-      overflow: hidden;
+        overflow: hidden;
+           
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
       
     }
@@ -292,12 +360,16 @@ footer ul li a:hover {
       display: flex;
       flex-direction: column;
       gap: 25px;
+      margin: 10px;
+    
       overflow: hidden;
-      margin: 20px 0;
-     
-      
+    
+    
+    
       
     }
+
+ 
     html {
       scroll-behavior: smooth;
     }
@@ -307,16 +379,15 @@ footer ul li a:hover {
       flex: 1;
       width: 100%;
       height: 330px;
-      background-color: #f4f4f4;
-      border: 2px solid #ddd;
+      background-color: #238fca;
+      border: 2px solid #1c1818;
       display: flex;
       justify-content: center;
       align-items: top;
       font-size: 1.5rem;
-
       opacity: 0;
+      animation: slideUp 3s forwards;
       
-      animation: slideUp 1s forwards;
     }
 
     /* Slide-up Animation */
@@ -366,6 +437,7 @@ footer ul li a:hover {
             width: 80%;
             max-width: 1200px;
             gap: 20px;
+            
         }
 
         .hero-box {
@@ -404,21 +476,25 @@ footer ul li a:hover {
 
 /* about*/
 #btn button{
-       font-size: 35px;
+       font-size: 25px;
         color:white;
+    
+        font-style: inherit;
         border-radius: 10px;
         border: none;
+       
         animation-name: btn;
         animation-iteration-count: infinite;
         animation-duration: 1s;
     }
     @keyframes btn {
         form {
-          background-color: red;
+          background-color:black;
+          opacity: 20px;
         }
         to {
-          background-color:cyan;
-          box-shadow: 0px 0px 30px 10px pink;
+          background-color:black;
+          box-shadow: 0px 0px 20px 10px pink;
         }
       }
       a{
@@ -428,7 +504,11 @@ footer ul li a:hover {
       button a{
         color: white;
       }
- 
+      .fa-caret-down {
+  float: right;
+  
+  padding-right: 8px;
+}
     </style>
 </head>
 <body>
@@ -442,38 +522,42 @@ footer ul li a:hover {
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a>
                     <ul>
-                        <li><a href="#">HTML <span>0 posts</span></a></li>
-                        <li><a href="#">CSS <span>0 posts</span></a></li>
-                        <li><a href="#">JS <span>0 posts</span></a></li>
-                        <li><a href="#">PHP</a>
+                        <li><a href="#">Website Design<span>0 posts</span></a></li>
+                        <li><a href="#">Soon..<span>0 posts</span></a></li>
+                        <li><a href="#">Soon..<span>0 posts</span></a></li>
+                        <li><a href="#">Soon..<i class="fa fa-caret-down"></i></a>
+                            
                             <ul>
-                                <li><a href="#">HTML <span>0 posts</span></a></li>
-                                <li><a href="#">CSS <span>0 posts</span></a></li>
-                                <li><a href="#">JS <span>0 posts</span></a></li>
-                                <li><a href="#">PHP <span>0 posts</span></a></li>
+                                <li><a href="#">Website Design<span>0 posts</span></a></li>
+                                <li><a href="#">Pending.. <span>0 posts</span></a></li>
+                                <li><a href="#">Pending..<span>0 posts</span></a></li>
+                                <li><a href="#">Pending..<span>0 posts</span></a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
                 <li><a href="#">Blog</a>
                     <ul>
-                        <li><a href="#">HTML <span>0 posts</span></a></li>
-                        <li><a href="#">CSS <span>0 posts</span></a></li>
-                        <li><a href="#">JS <span>0 posts</span></a></li>
-                        <li><a href="#">PHP <span>0 posts</span></a></li>
+                        <li><a href="#">Pending..<span>0 posts</span></a></li>
+                        <li><a href="#">Pending.. <span>0 posts</span></a></li>
+                        <li><a href="#">Pending..<span>0 posts</span></a></li>
+                        <li><a href="#">Pending..<span>0 posts</span></a></li>
                     </ul>
                 </li>
                 <li><a href="#">Tools</a>
                     <ul>
-                        <li><a href="#">HTML <span>0 posts</span></a></li>
-                        <li><a href="#">CSS <span>0 posts</span></a></li>
-                        <li><a href="#">JS <span>0 posts</span></a></li>
-                        <li><a href="#">PHP <span>0 posts</span></a></li>
+                        <li><a href="#">Pending.. <span>0 posts</span></a></li>
+                        <li><a href="#">Pending..<span>0 posts</span></a></li>
+                        <li><a href="#">Pending..<span>0 posts</span></a></li>
+                        <li><a href="#">Pending..<span>0 posts</span></a></li>
                     </ul></li>
             </ul>
         </nav>
     </header>
-    <div class="hero1"></div>
+    <div class="hero1">
+        
+          </video>
+    </div>
      <!-- Hero Section -->
   <section class="hero-section">
     <h1>PRADUM KUMAR</h1>
@@ -501,37 +585,37 @@ footer ul li a:hover {
         <div class="hero-box">
             <img src="A cartoon chase sce (3).jpg" alt="Image 1">
             <div class id="btn">
-                <button ><a href="about.html">About</a></button>
+                <button ><a href="#">Click..</a></button>
               </div>
         </div>
         <div class="hero-box">
             <img src="A cartoon chase sce (3).jpg" alt="Image 2">
             <div class id="btn">
-                <button ><a href="about.html">About</a></button>
+                <button ><a href="#"></a>Click..</button>
               </div>
         </div>
         <div class="hero-box">
             <img src="A cartoon chase sce (3).jpg" alt="Image 3">
             <div class id="btn">
-                <button ><a href="about.html">About</a></button>
+                <button ><a href="#">Click..</a></button>
               </div>
         </div>
         <div class="hero-box">
             <img src="A cartoon chase sce (3).jpg" alt="Image 3">
             <div class id="btn">
-                <button ><a href="about.html">About</a></button>
+                <button ><a href="#">Click..</a></button>
               </div>
         </div>
         <div class="hero-box">
             <img src="A cartoon chase sce (3).jpg" alt="Image 3">
             <div class id="btn">
-                <button ><a href="about.html">About</a></button>
+                <button ><a href="#">Click..</a></button>
               </div>
         </div>
         <div class="hero-box">
             <img src="A cartoon chase sce (3).jpg" alt="Image 3">
             <div class id="btn">
-                <button ><a href="about.html">About</a></button>
+                <button ><a href="#">Click..</a></button>
               </div>
         </div>
     </div>
