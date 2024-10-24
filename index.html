@@ -356,6 +356,7 @@ footer ul li a:hover {
             height: 70h;
             padding: 20px;
             background-color: #8db418;
+        
         }
 
         .hero-container {
@@ -369,7 +370,7 @@ footer ul li a:hover {
 
         .hero-box {
             flex: 1 1 calc(33% - 20px);
-            background-color: white;
+            background-color: black;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
@@ -379,6 +380,7 @@ footer ul li a:hover {
         .hero-box img {
             width: 100%;
             height: auto;
+            
             object-fit: cover;
         }
 
@@ -401,7 +403,31 @@ footer ul li a:hover {
         }
 
 /* about*/
-
+#btn button{
+       font-size: 35px;
+        color:white;
+        border-radius: 10px;
+        border: none;
+        animation-name: btn;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+    }
+    @keyframes btn {
+        form {
+          background-color: red;
+        }
+        to {
+          background-color:cyan;
+          box-shadow: 0px 0px 30px 10px pink;
+        }
+      }
+      a{
+        text-decoration:none
+        
+      }
+      button a{
+        color: white;
+      }
  
     </style>
 </head>
@@ -474,27 +500,39 @@ footer ul li a:hover {
     <div class="hero-container">
         <div class="hero-box">
             <img src="A cartoon chase sce (3).jpg" alt="Image 1">
-            <h3>Box 1</h3>
+            <div class id="btn">
+                <button ><a href="about.html">About</a></button>
+              </div>
         </div>
         <div class="hero-box">
             <img src="A cartoon chase sce (3).jpg" alt="Image 2">
-            <h3>Box 2</h3>
+            <div class id="btn">
+                <button ><a href="about.html">About</a></button>
+              </div>
         </div>
         <div class="hero-box">
             <img src="A cartoon chase sce (3).jpg" alt="Image 3">
-            <h3>Box 3</h3>
+            <div class id="btn">
+                <button ><a href="about.html">About</a></button>
+              </div>
         </div>
         <div class="hero-box">
             <img src="A cartoon chase sce (3).jpg" alt="Image 3">
-            <h3>Box 3</h3>
+            <div class id="btn">
+                <button ><a href="about.html">About</a></button>
+              </div>
         </div>
         <div class="hero-box">
             <img src="A cartoon chase sce (3).jpg" alt="Image 3">
-            <h3>Box 3</h3>
+            <div class id="btn">
+                <button ><a href="about.html">About</a></button>
+              </div>
         </div>
         <div class="hero-box">
             <img src="A cartoon chase sce (3).jpg" alt="Image 3">
-            <h3>Box 3</h3>
+            <div class id="btn">
+                <button ><a href="about.html">About</a></button>
+              </div>
         </div>
     </div>
 </section>
