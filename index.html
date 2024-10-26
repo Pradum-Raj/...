@@ -181,6 +181,17 @@
             #toggle:checked ~ .navigation {
                 display: block;
             }
+             /* Change label text when menu is open */
+             #toggle:checked + label:after {
+                content: "\2716";
+            }
+
+            /* Default label text */
+            label:after {
+                 content: "MENU\2630"; 
+                
+                
+            }
         }
 
         .hero1 {
@@ -194,6 +205,11 @@
             border: 5px solid black;
             background-size: cover;
             background-repeat: no-repeat;
+            width: 100%;
+  height: 400px;
+
+  background-size: 100% 100%;
+  border: none;
             animation: image 15s infinite ease-in-out;
         }
 
@@ -509,13 +525,62 @@
   
   padding-right: 8px;
 }
+ /* Full-screen video section styling */
+ .video-section {
+          position: relative;
+          width: 100vw;
+          height: 100vh;
+          overflow: hidden;
+        }
+    
+        .video-section video {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100vw;
+          height: 100vh;
+          object-fit: cover;
+          transform: translate(-50%, -50%);
+        }
+    
+        /* Optional overlay styling */
+        .video-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          font-size: 2rem;
+          text-align: center;
+          padding: 1rem;
+          z-index: 1;
+        }
+    
+        /* Responsive text scaling */
+        @media (max-width: 768px) {
+          .video-overlay {
+            font-size: 1.5rem;
+          }
+        }
+    
+        @media (max-width: 480px) {
+          .video-overlay {
+            font-size: 1.2rem;
+          }
+        }
+   
     </style>
 </head>
 <body>
     <header class="header">
         <div class="logo"><img src="pk.jpg"></div>
         <input type="checkbox" id="toggle">
-        <label for="toggle">MENU &#9776;</label>
+        <label for="toggle"></label>
         <nav class="navigation">
             <ul>
                 <li><a href="#">Home</a></li> 
@@ -525,7 +590,7 @@
                         <li><a href="#">Website Design<span>0 posts</span></a></li>
                         <li><a href="#">Soon..<span>0 posts</span></a></li>
                         <li><a href="#">Soon..<span>0 posts</span></a></li>
-                        <li><a href="#">Soon..<i class="fa fa-caret-down"></i></a>
+                        <li><a href="#">php..<i class="fa fa-caret-down"></i></a>
                             
                             <ul>
                                 <li><a href="#">Website Design<span>0 posts</span></a></li>
@@ -582,7 +647,7 @@
   </div>
   <section class="hero">
     <div class="hero-container">
-        <div class="hero-box">
+        <div class="hero-box"id="hero-box">
             <img src="A cartoon chase sce (3).jpg" alt="Image 1">
             <div class id="btn">
                 <button ><a href="#">Click..</a></button>
@@ -621,6 +686,16 @@
     </div>
 </section>
     <footer>
+       
+    
+      <section class="video-section">
+        <video src="pk_nature.mp4" autoplay muted loop></video>
+        <div class="video-overlay">जो मंजिलों को पाना जानते हैं,
+            वो हार कर भी मुस्कराना जानते हैं।
+            ख्वाब उनके हकीकत बनते हैं,
+            जो वक्त पर खुद को आजमाना जानते हैं।</div>
+      </section>
+    
         <div class="footer-content">
             <h3>&copy; Design By Pradum Kumar.</h3>
             <ul class="social-media">
@@ -631,6 +706,7 @@
             </ul>
         </div>
     </footer>
-
+    
+             
 </body>
 </html>
